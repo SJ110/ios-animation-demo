@@ -10,6 +10,8 @@
 #import "ViewController1.h"
 #import "ViewController2.h"
 #import "ViewController3.h"
+#import "ViewController4.h"
+#import "ViewController5.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataArray;
@@ -28,7 +30,9 @@
     _dataArray = @[@"NSThread三种创建方式",
                    @"卖票模拟",
                    @"串行/并行的同/异步执行",
-                   @"队列组"];
+                   @"队列组",
+                   @"事件传递",
+                   @"事件冲突"];
     [self.view addSubview:_tableView];
 }
 
@@ -74,6 +78,15 @@
         ViewController3 *vc = [ViewController3 new];
         [self.navigationController pushViewController:vc animated:YES];
     }
+    if (indexPath.row == 4) {
+        ViewController4 *vc = [ViewController4 new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.row == 5) {
+        ViewController5 *vc = [ViewController5 new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+
 }
 
 

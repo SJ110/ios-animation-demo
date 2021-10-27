@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface AppDelegate ()
 @end
@@ -22,5 +23,9 @@
     return YES;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s",__func__);
+    [super touchesBegan:touches withEvent:event];
+}
 
 @end
