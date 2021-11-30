@@ -20,6 +20,7 @@
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     _window.rootViewController = navi;
     [_window makeKeyAndVisible];
+    NSLog(@"+++%@",navi);
     return YES;
 }
 
