@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _testView = [[TestView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
+    SJPGestureRec *tap = [[SJPGestureRec alloc]initWithTarget:self action:@selector(tap)];
     [self.view addGestureRecognizer:tap];
     _testView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:_testView];
@@ -104,4 +104,29 @@
     NSLog(@"%s",__func__);
     [super touchesCancelled:touches withEvent:event];
 }
+@end
+
+@implementation SJPGestureRec
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s",__func__);
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s",__func__);
+    [super touchesMoved:touches withEvent:event];
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s",__func__);
+    [super touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%s",__func__);
+    [super touchesCancelled:touches withEvent:event];
+}
+
+
 @end

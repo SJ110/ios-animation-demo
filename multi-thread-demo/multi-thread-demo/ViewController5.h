@@ -21,4 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface SJPGestureRec : UITapGestureRecognizer
+
+@end
+
 NS_ASSUME_NONNULL_END
