@@ -31,6 +31,18 @@
     }
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleDefault;
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return UIStatusBarAnimationFade;
+}
+
 - (void)setDismissAnimate:(NSString *)animteString {
     [self.btn setTitle:animteString forState:UIControlStateNormal];
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3052B1C289CCB556555C02 /* Pods_multi_thread_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1144E8FBBBB3B68897CEDF76 /* Pods_multi_thread_demo.framework */; };
 		D609C39E2710383A0062EAF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D609C39D2710383A0062EAF9 /* AppDelegate.m */; };
 		D609C3A42710383A0062EAF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D609C3A32710383A0062EAF9 /* ViewController.m */; };
 		D609C3A72710383A0062EAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D609C3A52710383A0062EAF9 /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 		D609C3BD271056640062EAF9 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = D609C3BC271056640062EAF9 /* ViewController1.m */; };
 		D609C3C2271564CD0062EAF9 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D609C3C1271564CD0062EAF9 /* ViewController2.m */; };
 		D609C3C62715B5290062EAF9 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = D609C3C52715B5290062EAF9 /* ViewController3.m */; };
+		D6297A8A277ABE5E00A9DC6A /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6297A89277ABE5E00A9DC6A /* UILabel+Extension.m */; };
+		D6297A8D277AE0BE00A9DC6A /* ViewController8.m in Sources */ = {isa = PBXBuildFile; fileRef = D6297A8C277AE0BE00A9DC6A /* ViewController8.m */; };
+		D6297A90277B183700A9DC6A /* ViewController9.m in Sources */ = {isa = PBXBuildFile; fileRef = D6297A8F277B183700A9DC6A /* ViewController9.m */; };
 		D651A8002754A953001B0B1B /* NavigationControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = D651A7FF2754A953001B0B1B /* NavigationControllerTransitioning.m */; };
 		D66ACA542752056500785814 /* ViewControllerDismisstransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ACA532752056500785814 /* ViewControllerDismisstransition.m */; };
 		D6B09056274F922900A31494 /* Viewcontroller7.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B09055274F922900A31494 /* Viewcontroller7.m */; };
@@ -29,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1144E8FBBBB3B68897CEDF76 /* Pods_multi_thread_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_multi_thread_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C10B1B94F2BBB18EB9360C /* Pods-multi-thread-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-multi-thread-demo.release.xcconfig"; path = "Target Support Files/Pods-multi-thread-demo/Pods-multi-thread-demo.release.xcconfig"; sourceTree = "<group>"; };
+		9F576F7C67C2318ED376C64C /* Pods-multi-thread-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-multi-thread-demo.debug.xcconfig"; path = "Target Support Files/Pods-multi-thread-demo/Pods-multi-thread-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D609C3992710383A0062EAF9 /* multi-thread-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "multi-thread-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D609C39C2710383A0062EAF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D609C39D2710383A0062EAF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +54,12 @@
 		D609C3C1271564CD0062EAF9 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		D609C3C42715B5290062EAF9 /* ViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		D609C3C52715B5290062EAF9 /* ViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		D6297A88277ABE5E00A9DC6A /* UILabel+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		D6297A89277ABE5E00A9DC6A /* UILabel+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		D6297A8B277AE0BE00A9DC6A /* ViewController8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController8.h; sourceTree = "<group>"; };
+		D6297A8C277AE0BE00A9DC6A /* ViewController8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController8.m; sourceTree = "<group>"; };
+		D6297A8E277B183700A9DC6A /* ViewController9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController9.h; sourceTree = "<group>"; };
+		D6297A8F277B183700A9DC6A /* ViewController9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController9.m; sourceTree = "<group>"; };
 		D651A7FE2754A953001B0B1B /* NavigationControllerTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationControllerTransitioning.h; sourceTree = "<group>"; };
 		D651A7FF2754A953001B0B1B /* NavigationControllerTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerTransitioning.m; sourceTree = "<group>"; };
 		D66ACA522752056500785814 /* ViewControllerDismisstransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerDismisstransition.h; sourceTree = "<group>"; };
@@ -72,17 +85,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3052B1C289CCB556555C02 /* Pods_multi_thread_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EBE122B5B833A1B0F124CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1144E8FBBBB3B68897CEDF76 /* Pods_multi_thread_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2AFA4858FC25117A81CE561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F576F7C67C2318ED376C64C /* Pods-multi-thread-demo.debug.xcconfig */,
+				48C10B1B94F2BBB18EB9360C /* Pods-multi-thread-demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D609C390271038390062EAF9 = {
 			isa = PBXGroup;
 			children = (
 				D609C39B2710383A0062EAF9 /* multi-thread-demo */,
 				D609C39A2710383A0062EAF9 /* Products */,
+				C2AFA4858FC25117A81CE561 /* Pods */,
+				9EBE122B5B833A1B0F124CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +134,10 @@
 				D609C39D2710383A0062EAF9 /* AppDelegate.m */,
 				D609C3A22710383A0062EAF9 /* ViewController.h */,
 				D609C3A32710383A0062EAF9 /* ViewController.m */,
+				D6297A8B277AE0BE00A9DC6A /* ViewController8.h */,
+				D6297A8C277AE0BE00A9DC6A /* ViewController8.m */,
+				D6297A8E277B183700A9DC6A /* ViewController9.h */,
+				D6297A8F277B183700A9DC6A /* ViewController9.m */,
 				D609C3A52710383A0062EAF9 /* Main.storyboard */,
 				D609C3A82710383D0062EAF9 /* Assets.xcassets */,
 				D609C3AA2710383D0062EAF9 /* LaunchScreen.storyboard */,
@@ -110,6 +147,8 @@
 				D609C3B827103D450062EAF9 /* ViewController0.m */,
 				D609C3BB271056640062EAF9 /* ViewController1.h */,
 				D609C3BC271056640062EAF9 /* ViewController1.m */,
+				D6297A88277ABE5E00A9DC6A /* UILabel+Extension.h */,
+				D6297A89277ABE5E00A9DC6A /* UILabel+Extension.m */,
 				D609C3C0271564CD0062EAF9 /* ViewController2.h */,
 				D609C3C1271564CD0062EAF9 /* ViewController2.m */,
 				D609C3C42715B5290062EAF9 /* ViewController3.h */,
@@ -143,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D609C3B22710383D0062EAF9 /* Build configuration list for PBXNativeTarget "multi-thread-demo" */;
 			buildPhases = (
+				001622632BAB6D7DFBE624A5 /* [CP] Check Pods Manifest.lock */,
 				D609C3952710383A0062EAF9 /* Sources */,
 				D609C3962710383A0062EAF9 /* Frameworks */,
 				D609C3972710383A0062EAF9 /* Resources */,
+				A0CA03A6B38428164E5A35C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,19 +241,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		001622632BAB6D7DFBE624A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-multi-thread-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CA03A6B38428164E5A35C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-multi-thread-demo/Pods-multi-thread-demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-multi-thread-demo/Pods-multi-thread-demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-multi-thread-demo/Pods-multi-thread-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D609C3952710383A0062EAF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6297A8A277ABE5E00A9DC6A /* UILabel+Extension.m in Sources */,
 				D609C3BD271056640062EAF9 /* ViewController1.m in Sources */,
 				D609C3A42710383A0062EAF9 /* ViewController.m in Sources */,
 				D609C39E2710383A0062EAF9 /* AppDelegate.m in Sources */,
 				D651A8002754A953001B0B1B /* NavigationControllerTransitioning.m in Sources */,
+				D6297A8D277AE0BE00A9DC6A /* ViewController8.m in Sources */,
 				D609C3AF2710383D0062EAF9 /* main.m in Sources */,
 				D6B0905F2750E5D700A31494 /* SwipeInteractiveTransition.m in Sources */,
 				D6B09059274FB47C00A31494 /* ModalViewController.m in Sources */,
 				D609C3B927103D450062EAF9 /* ViewController0.m in Sources */,
+				D6297A90277B183700A9DC6A /* ViewController9.m in Sources */,
 				D6B0905C2750B87100A31494 /* ViewControllerAnimatedTransitioning.m in Sources */,
 				D6F16F662730D28A00CC0F67 /* ViewController6.m in Sources */,
 				D6B09056274F922900A31494 /* Viewcontroller7.m in Sources */,
@@ -297,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -360,9 +446,11 @@
 		};
 		D609C3B32710383D0062EAF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F576F7C67C2318ED376C64C /* Pods-multi-thread-demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4GSX89856T;
 				INFOPLIST_FILE = "multi-thread-demo/Info.plist";
@@ -378,9 +466,11 @@
 		};
 		D609C3B42710383D0062EAF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C10B1B94F2BBB18EB9360C /* Pods-multi-thread-demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4GSX89856T;
 				INFOPLIST_FILE = "multi-thread-demo/Info.plist";

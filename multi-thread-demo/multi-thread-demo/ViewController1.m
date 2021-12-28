@@ -22,6 +22,30 @@
     _label.font = [UIFont systemFontOfSize:14];
     _label.frame = CGRectMake(self.view.frame.size.width/2-50, self.view.frame.size.height/2, 100, 50);
     [self.view addSubview:_label];
+    dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(queue, ^{
+        NSLog(@"--%@ start",[NSThread currentThread]);
+        dispatch_async(queue, ^{
+            NSLog(@"--%@ doing",[NSThread currentThread]);
+            for (int i = 0; i<20; i++) {
+                NSLog(@"%d---  ",i);
+            }
+        });
+        NSLog(@"--%@ end",[NSThread currentThread]);
+        [NSThread sleepForTimeInterval:2];
+    });
+    
+
+    classA *a = [classA new];
+    a.array = @[@"1"].mutableCopy;
+    a.istrue = NO;
+    classA *aa = a;
+    NSLog(@"--%p,---%p",a,aa);
+    aa.array = @[@"2"].mutableCopy;
+    NSLog(@"%@----%@",a.array,aa.array);
+//    classA *aa = [classA new];
+    subClassA *subAa = [subClassA new];
+//    subClassA *subA = [subClassA new];
     
 }
 
@@ -44,7 +68,7 @@
         @synchronized (self) {
             if(self.tickets>0) {
                 self.tickets--;
-                NSLog(@"%@卖了一张,余票%ld",[NSThread currentThread].name,self.tickets);
+                NSLog(@"%@卖了一张,余票%ld",[NSThread currentThread].name,(long)self.tickets);
             } else {
                 NSLog(@"卖完了,票");
                 return;
@@ -52,6 +76,44 @@
         }
 
     }
+}
+
+@end
+
+
+@implementation classA
+
++ (void)initialize {
+    NSLog(@"%s",__func__);
+}
+
+@end
+
+@implementation subClassA
+
++ (void)initialize {
+    NSLog(@"%s🤔",__func__);
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        int params = 1;
+        [self addTest:params params:1];
+    }
+    return self;
+}
+
+- (int)addTest:(int)params1 params:(int)params2 {
+    params1 = params1+1;
+    NSLog(@"%d",(params1+params2));
+    return params1+params2;
+}
+@end
+
+@implementation classA (extension)
+
++ (void)initialize {
+    NSLog(@"%s",__func__);
 }
 
 @end

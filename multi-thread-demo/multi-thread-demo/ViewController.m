@@ -14,6 +14,9 @@
 #import "ViewController5.h"
 #import "ViewController6.h"
 #import "Viewcontroller7.h"
+#import "ViewController8.h"
+#import "ViewController9.h"
+#import "UILabel+Extension.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {
     CGFloat _defaultOffset;
 }
@@ -24,13 +27,33 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    UILabel *lable = [UILabel new];
+    lable.testInt = 10;
+    NSLog(@"%ld --",(long)lable.testInt);
     [super viewDidLoad];
     self.title = @"多线程demo";
     self.view.backgroundColor = [UIColor whiteColor];
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame style: UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    
+    /*
+     iOS15以下生效
+     barTintColor 设置背景色
+     tintColor 设置文字颜色,不包含自定义barbutton;
+     */
+    self.navigationController.navigationBar.barTintColor= [UIColor  redColor];
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    /*
+     iOS 15生效
+     */
+    if (@available(iOS 15.0,*)) {
+        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+        appearance.backgroundColor = [UIColor whiteColor];
+        appearance.titleTextAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+                                           NSForegroundColorAttributeName:[UIColor blueColor]};
+        self.navigationController.navigationBar.standardAppearance = appearance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+    }
     _dataArray = @[@"NSThread三种创建方式",
                    @"卖票模拟",
                    @"串行/并行的同/异步执行",
@@ -38,7 +61,9 @@
                    @"事件传递",
                    @"事件冲突",
                    @"向下滑动动画",
-                   @"自定义视图动画"];
+                   @"自定义视图动画",
+                   @"消息转发机制",
+                   @"UIScrollView"];
     [self.view addSubview:_tableView];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(click)];
 }
@@ -100,6 +125,12 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 7) {
         Viewcontroller7 *vc = [Viewcontroller7 new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 8) {
+        ViewController8 *vc = [ViewController8 new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 9) {
+        ViewController9 *vc = [ViewController9 new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 

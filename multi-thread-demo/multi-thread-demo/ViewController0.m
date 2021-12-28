@@ -15,7 +15,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t serialQueue2 = dispatch_queue_create("test2", DISPATCH_QUEUE_SERIAL);
+    for (int i = 0; i < 10; i++) {
+        dispatch_sync(concurrentQueue, ^{
+            NSLog(@"%d--%@",i,[NSThread currentThread]);
+        });
+    }
+//    NSLog(@"1");
+//
+//    dispatch_async(serialQueue2, ^{
+////        [NSThread sleepForTimeInterval:3];
+//         NSLog(@"2--%@",[NSThread currentThread]);
+//    });
+//    [NSThread sleepForTimeInterval:1];
+//    NSLog(@"3");
+//    dispatch_sync(serialQueue2, ^{
+//
+//        NSLog(@"4,%@",[NSThread currentThread]);
+//    });
+//
+//    NSLog(@"5");
     UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(100, 400, 70, 17)];
     lable.textColor = [UIColor blackColor];
     lable.textAlignment = NSTextAlignmentCenter;
@@ -34,6 +54,10 @@
     _btn.frame = CGRectMake(self.view.frame.size.width/2-70, 300, 140, 50);
     [_btn addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_btn];
+}
+/// 因为push过来,VC0背navi持有,因此prefersStatusBarHidden不生效
+- (BOOL)prefersStatusBarHidden {
+    return NO;
 }
 
 - (void)onClick {

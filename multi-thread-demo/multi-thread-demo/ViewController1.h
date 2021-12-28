@@ -13,4 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface classA : NSObject
+@property (nonatomic, strong) NSMutableArray *array;
+@property (nonatomic, assign) BOOL istrue;
+@end
+
+@interface subClassA : classA
+
+@end
+
+@interface classA (extension)
+
+@end
+
 NS_ASSUME_NONNULL_END
