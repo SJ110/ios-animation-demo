@@ -13,9 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface classA : NSObject
+@interface classA : NSObject<NSCopying,NSMutableCopying>
 @property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, assign) BOOL istrue;
+@property (nonatomic, copy) NSString *str;
+@property (nonatomic, copy) NSArray *iArray;
 @end
 
 @interface subClassA : classA
@@ -26,4 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface SJPSingletonManager:NSObject <NSCopying,NSMutableCopying>
++ (instancetype)shareManager;
+@end
 NS_ASSUME_NONNULL_END

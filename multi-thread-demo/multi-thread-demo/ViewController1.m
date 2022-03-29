@@ -36,16 +36,11 @@
     });
     
 
-    classA *a = [classA new];
-    a.array = @[@"1"].mutableCopy;
-    a.istrue = NO;
-    classA *aa = a;
-    NSLog(@"--%p,---%p",a,aa);
-    aa.array = @[@"2"].mutableCopy;
-    NSLog(@"%@----%@",a.array,aa.array);
-//    classA *aa = [classA new];
     subClassA *subAa = [subClassA new];
-//    subClassA *subA = [subClassA new];
+    subClassA *subA = [subClassA new];
+    classA *A = [classA new];
+    classA *Aa = [A copy];
+    classA *Aaa = [A mutableCopy];
     
 }
 
@@ -87,6 +82,39 @@
     NSLog(@"%s",__func__);
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _iArray = @[@"111",@"222"];
+        _array = @[@"3333"].mutableCopy;
+        NSMutableArray *mArray = [_iArray mutableCopy];
+        [mArray setValue:@"222" forKey:@"1111"];
+        _iArray = mArray.copy;
+        _str = @"ssss";
+        
+    }
+    return self;
+}
+
+- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+    classA *A = [[classA alloc] init];
+    A.iArray = self.iArray.copy;
+    A.str = self.str.copy;
+    A.array = self.array.copy;
+    NSLog(@"copy--%p,%p,---array:%p,%p",self.str,A.str,self.array,A.array);
+    return A;
+}
+
+- (nonnull id)mutableCopyWithZone:(nullable NSZone *)zone {
+    classA *A = [[classA alloc] init];
+    A.iArray = self.iArray.mutableCopy;
+    A.str = self.str.mutableCopy;
+    A.array = self.array.copy;
+    NSLog(@"copy--%p,%p",self.str,A.str);
+    return A;
+}
+
 @end
 
 @implementation subClassA
@@ -112,8 +140,36 @@
 
 @implementation classA (extension)
 
-+ (void)initialize {
-    NSLog(@"%s",__func__);
+//+ (void)initialize {
+//    NSLog(@"%s",__func__);
+//}
+
+@end
+
+@implementation SJPSingletonManager
+
++(instancetype)shareManager {
+    return [[self alloc] init];
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    static SJPSingletonManager *_manager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!_manager) {
+            _manager = [super allocWithZone:zone];
+        }
+    });
+    return _manager;
+}
+
+- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+    return [SJPSingletonManager allocWithZone:zone];
+}
+
+
+- (nonnull id)mutableCopyWithZone:(nullable NSZone *)zone {
+    return [SJPSingletonManager allocWithZone:zone];
 }
 
 @end

@@ -16,9 +16,13 @@
 #import "Viewcontroller7.h"
 #import "ViewController8.h"
 #import "ViewController9.h"
+#import "ViewController10.h"
 #import "UILabel+Extension.h"
+#import "naviAnimateViewController.h"
+#import <Masonry/Masonry.h>
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {
     CGFloat _defaultOffset;
+    UIView *view;
 }
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataArray;
@@ -33,22 +37,44 @@
     [super viewDidLoad];
     self.title = @"多线程demo";
     self.view.backgroundColor = [UIColor whiteColor];
-    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style: UITableViewStylePlain];
+    
+    /*
+     以下两个属性都可以设置视图不被navi遮挡
+     */
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationController.navigationBar.translucent = NO;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style: UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+//    UIView *view = [UIView new];
+    view = [UIView new];
+    view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:view];
+    [self.view addSubview:_tableView];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(50);
+        make.bottom.mas_equalTo(_tableView.mas_top);
+    }];
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.mas_equalTo(self.view);
+        make.top.mas_equalTo(view.mas_bottom);
+    }];
     /*
      iOS15以下生效
      barTintColor 设置背景色
      tintColor 设置文字颜色,不包含自定义barbutton;
      */
-    self.navigationController.navigationBar.barTintColor= [UIColor  redColor];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(click)];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor blueColor];/// 设置自定义rightbar textcolor
+    self.navigationController.navigationBar.barTintColor= [UIColor redColor];
+    self.navigationController.navigationBar.tintColor = [UIColor blueColor];
     /*
      iOS 15生效
      */
     if (@available(iOS 15.0,*)) {
         UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-        appearance.backgroundColor = [UIColor whiteColor];
+        appearance.backgroundColor = [UIColor yellowColor]; /// 设置navi背景色
         appearance.titleTextAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:19],
                                            NSForegroundColorAttributeName:[UIColor blueColor]};
         self.navigationController.navigationBar.standardAppearance = appearance;
@@ -63,9 +89,9 @@
                    @"向下滑动动画",
                    @"自定义视图动画",
                    @"消息转发机制",
-                   @"UIScrollView"];
-    [self.view addSubview:_tableView];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(click)];
+                   @"UIScrollView",
+                   @"scrollView嵌套tableView",
+                   @"导航栏动画过程交互"];
 }
 
 - (void)click {
@@ -131,6 +157,12 @@
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 9) {
         ViewController9 *vc = [ViewController9 new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 10) {
+        ViewController10 *vc = [ViewController10 new];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 11) {
+        naviAnimateViewController *vc = [naviAnimateViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 

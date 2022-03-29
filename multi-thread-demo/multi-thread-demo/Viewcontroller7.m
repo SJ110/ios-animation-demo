@@ -11,6 +11,7 @@
 #import "SwipeInteractiveTransition.h"
 #import "ViewControllerDismisstransition.h"
 #import "NavigationControllerTransitioning.h"
+#import "UIViewController+UIViewControllerExtension.h"
 
 @interface Viewcontroller7 ()<ModalViewControllerDelegate,UIViewControllerTransitioningDelegate,UINavigationControllerDelegate>
 @property (nonatomic, strong) ViewControllerAnimatedTransitioning *transition;
@@ -151,6 +152,7 @@
         default:
             break;
     }
+    UIViewController *showVc = [UIViewController currentViewController];
 }
 
 - (void)dismissModalViewController:(UIViewController *)vc {

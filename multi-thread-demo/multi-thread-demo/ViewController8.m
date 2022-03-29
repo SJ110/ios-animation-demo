@@ -26,14 +26,43 @@ static NSString *selectorName = @"--";
         make.centerY.mas_equalTo(self.view.mas_centerY);
         make.height.mas_equalTo(20).priorityHigh();
     }];
-    [self performSelector:@selector(foo:)];
+    
+    UILabel *lable1 = [UILabel new];
+    lable1.text = @"123";
+    lable1.backgroundColor = [UIColor redColor];
+    UILabel *lable2 = [UILabel new];
+    lable2.text = @"345";
+    lable2.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:lable1];
+    [self.view addSubview:lable2];
+    [lable1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left);
+        make.height.mas_equalTo(20);
+        make.centerY.mas_equalTo(self.view.mas_centerY).offset(100);
+        make.right.mas_equalTo(lable2.mas_left);
+
+    }];
+    [lable2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(lable1.mas_right);
+        make.height.mas_equalTo(20);
+        make.centerY.mas_equalTo(self.view.mas_centerY).offset(100);
+//        make.right.mas_equalTo(self.view.mas_right);
+        make.left.right.top.bottom.mas_equalTo(0);
+    }];
+
+    [self performSelector:@selector(foo:) withObject:nil];
 }
  /// 消息转发第一步
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     /// 处理实例方法
     selectorName = NSStringFromSelector(_cmd);
     if (sel == @selector(foo:)) {
-//        class_addMethod([self class], @selector(foo:), (IMP)fooMethod, "v@:");
+        /*
+         ”v“:返回值void ;
+         ”@“:调用方法的的实例为对象类型
+         “:”:表示方法
+         */
+        class_addMethod([self class], @selector(foo:), (IMP)fooMethod, "v@:");
         /// 无论返回yes/no,只要没有添加方法就会继续消息转发
         return YES;
 
@@ -44,7 +73,7 @@ static NSString *selectorName = @"--";
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     selectorName = NSStringFromSelector(_cmd);
     if (aSelector == @selector(foo:)) {
-//        return [forwardClass new];
+        return [forwardClass new];
     }
     return [super forwardingTargetForSelector:aSelector];
 }

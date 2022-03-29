@@ -31,6 +31,10 @@
     [_testBtn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+
 - (void)tap {
     NSLog(@"%s",__func__);
 }

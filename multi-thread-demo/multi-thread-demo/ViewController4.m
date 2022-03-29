@@ -33,6 +33,10 @@
     _view_4 = [view4 new];
     _view_4.backgroundColor = [UIColor blackColor];
     _view_4.frame = CGRectMake(100, 200, 60, 60);
+    UIView *_testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    _testView.backgroundColor = [UIColor grayColor];
+    [_view_4 addSubview:_testView];
+    _view_4.bounds = CGRectMake(20, 20, 60, 60);
     [self.view addSubview:_view_1];
     [self.view addSubview:_view_2];
     [self.view addSubview:_view_3];

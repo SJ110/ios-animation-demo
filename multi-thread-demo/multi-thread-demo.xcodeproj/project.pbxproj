@@ -21,8 +21,12 @@
 		D6297A8A277ABE5E00A9DC6A /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D6297A89277ABE5E00A9DC6A /* UILabel+Extension.m */; };
 		D6297A8D277AE0BE00A9DC6A /* ViewController8.m in Sources */ = {isa = PBXBuildFile; fileRef = D6297A8C277AE0BE00A9DC6A /* ViewController8.m */; };
 		D6297A90277B183700A9DC6A /* ViewController9.m in Sources */ = {isa = PBXBuildFile; fileRef = D6297A8F277B183700A9DC6A /* ViewController9.m */; };
+		D6422B92278C230100548857 /* ViewController10.m in Sources */ = {isa = PBXBuildFile; fileRef = D6422B91278C230100548857 /* ViewController10.m */; };
+		D6444C3E27E9B8B8004FD8E1 /* naviAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6444C3D27E9B8B8004FD8E1 /* naviAnimateViewController.m */; };
 		D651A8002754A953001B0B1B /* NavigationControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = D651A7FF2754A953001B0B1B /* NavigationControllerTransitioning.m */; };
+		D66798152783E95C001CDE93 /* UIViewController+UIViewControllerExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D66798142783E95C001CDE93 /* UIViewController+UIViewControllerExtension.m */; };
 		D66ACA542752056500785814 /* ViewControllerDismisstransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ACA532752056500785814 /* ViewControllerDismisstransition.m */; };
+		D67336BF278588EA008D6759 /* NSObject+MBExtends.m in Sources */ = {isa = PBXBuildFile; fileRef = D67336BE278588EA008D6759 /* NSObject+MBExtends.m */; };
 		D6B09056274F922900A31494 /* Viewcontroller7.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B09055274F922900A31494 /* Viewcontroller7.m */; };
 		D6B09059274FB47C00A31494 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B09058274FB47C00A31494 /* ModalViewController.m */; };
 		D6B0905C2750B87100A31494 /* ViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B0905B2750B87100A31494 /* ViewControllerAnimatedTransitioning.m */; };
@@ -60,10 +64,18 @@
 		D6297A8C277AE0BE00A9DC6A /* ViewController8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController8.m; sourceTree = "<group>"; };
 		D6297A8E277B183700A9DC6A /* ViewController9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController9.h; sourceTree = "<group>"; };
 		D6297A8F277B183700A9DC6A /* ViewController9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController9.m; sourceTree = "<group>"; };
+		D6422B90278C230100548857 /* ViewController10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController10.h; sourceTree = "<group>"; };
+		D6422B91278C230100548857 /* ViewController10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController10.m; sourceTree = "<group>"; };
+		D6444C3C27E9B8B8004FD8E1 /* naviAnimateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = naviAnimateViewController.h; sourceTree = "<group>"; };
+		D6444C3D27E9B8B8004FD8E1 /* naviAnimateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = naviAnimateViewController.m; sourceTree = "<group>"; };
 		D651A7FE2754A953001B0B1B /* NavigationControllerTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationControllerTransitioning.h; sourceTree = "<group>"; };
 		D651A7FF2754A953001B0B1B /* NavigationControllerTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerTransitioning.m; sourceTree = "<group>"; };
+		D66798132783E95C001CDE93 /* UIViewController+UIViewControllerExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UIViewControllerExtension.h"; sourceTree = "<group>"; };
+		D66798142783E95C001CDE93 /* UIViewController+UIViewControllerExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UIViewControllerExtension.m"; sourceTree = "<group>"; };
 		D66ACA522752056500785814 /* ViewControllerDismisstransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerDismisstransition.h; sourceTree = "<group>"; };
 		D66ACA532752056500785814 /* ViewControllerDismisstransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDismisstransition.m; sourceTree = "<group>"; };
+		D67336BD278588EA008D6759 /* NSObject+MBExtends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MBExtends.h"; sourceTree = "<group>"; };
+		D67336BE278588EA008D6759 /* NSObject+MBExtends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MBExtends.m"; sourceTree = "<group>"; };
 		D6B09054274F922900A31494 /* Viewcontroller7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Viewcontroller7.h; sourceTree = "<group>"; };
 		D6B09055274F922900A31494 /* Viewcontroller7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Viewcontroller7.m; sourceTree = "<group>"; };
 		D6B09057274FB47C00A31494 /* ModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
@@ -132,6 +144,8 @@
 			children = (
 				D609C39C2710383A0062EAF9 /* AppDelegate.h */,
 				D609C39D2710383A0062EAF9 /* AppDelegate.m */,
+				D67336BD278588EA008D6759 /* NSObject+MBExtends.h */,
+				D67336BE278588EA008D6759 /* NSObject+MBExtends.m */,
 				D609C3A22710383A0062EAF9 /* ViewController.h */,
 				D609C3A32710383A0062EAF9 /* ViewController.m */,
 				D6297A8B277AE0BE00A9DC6A /* ViewController8.h */,
@@ -171,6 +185,12 @@
 				D66ACA532752056500785814 /* ViewControllerDismisstransition.m */,
 				D651A7FE2754A953001B0B1B /* NavigationControllerTransitioning.h */,
 				D651A7FF2754A953001B0B1B /* NavigationControllerTransitioning.m */,
+				D66798132783E95C001CDE93 /* UIViewController+UIViewControllerExtension.h */,
+				D66798142783E95C001CDE93 /* UIViewController+UIViewControllerExtension.m */,
+				D6422B90278C230100548857 /* ViewController10.h */,
+				D6422B91278C230100548857 /* ViewController10.m */,
+				D6444C3C27E9B8B8004FD8E1 /* naviAnimateViewController.h */,
+				D6444C3D27E9B8B8004FD8E1 /* naviAnimateViewController.m */,
 			);
 			path = "multi-thread-demo";
 			sourceTree = "<group>";
@@ -289,14 +309,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6297A8A277ABE5E00A9DC6A /* UILabel+Extension.m in Sources */,
+				D6422B92278C230100548857 /* ViewController10.m in Sources */,
 				D609C3BD271056640062EAF9 /* ViewController1.m in Sources */,
 				D609C3A42710383A0062EAF9 /* ViewController.m in Sources */,
 				D609C39E2710383A0062EAF9 /* AppDelegate.m in Sources */,
 				D651A8002754A953001B0B1B /* NavigationControllerTransitioning.m in Sources */,
+				D67336BF278588EA008D6759 /* NSObject+MBExtends.m in Sources */,
+				D66798152783E95C001CDE93 /* UIViewController+UIViewControllerExtension.m in Sources */,
 				D6297A8D277AE0BE00A9DC6A /* ViewController8.m in Sources */,
 				D609C3AF2710383D0062EAF9 /* main.m in Sources */,
 				D6B0905F2750E5D700A31494 /* SwipeInteractiveTransition.m in Sources */,
 				D6B09059274FB47C00A31494 /* ModalViewController.m in Sources */,
+				D6444C3E27E9B8B8004FD8E1 /* naviAnimateViewController.m in Sources */,
 				D609C3B927103D450062EAF9 /* ViewController0.m in Sources */,
 				D6297A90277B183700A9DC6A /* ViewController9.m in Sources */,
 				D6B0905C2750B87100A31494 /* ViewControllerAnimatedTransitioning.m in Sources */,
@@ -439,6 +463,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

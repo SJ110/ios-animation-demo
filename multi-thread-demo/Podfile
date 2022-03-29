@@ -8,5 +8,6 @@ target 'multi-thread-demo' do
   # Pods for multi-thread-demo
   pod 'Masonry'
   pod 'SDWebImage'
-
+  pod 'MJRefresh'
+  pod 'IQKeyboardManager', '5.0.6'
 end
